@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glam Touch | Beauty &amp; Electronics Store</title>
+  <meta name="description" content="Glam Touch hand-picks the best nail care, beauty, skincare, haircare, fragrance, electronics, accessories and gift sets from Amazon — so you don't have to.">
+  <meta property="og:title" content="Glam Touch | Beauty &amp; Electronics Store">
+  <meta property="og:description" content="Curated beauty, skincare, haircare, fragrance and electronics picks from Amazon.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23C8A84B' d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#" onclick="showPage('home'); return false;">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      Glam Touch
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" class="active" onclick="showPage('home'); setActive(this); return false;">Home</a></li>
+      <li><a href="#" onclick="showPage('products'); setActive(this); return false;">Products</a></li>
+      <li><a href="#" onclick="showPage('blog'); setActive(this); return false;">Beauty Tips</a></li>
+      <li><a href="#" onclick="showPage('about'); setActive(this); return false;">About</a></li>
+      <li><a href="#" onclick="showPage('contact'); setActive(this); return false;">Contact</a></li>
+    </ul>
+    <a href="https://www.amazon.com?tag=glamtouch-20" target="_blank" rel="nofollow sponsored noopener" class="nav-cta">Shop Now</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" onclick="showPage('home'); toggleMenu(); return false;">Home</a>
+    <a href="#" onclick="showPage('products'); toggleMenu(); return false;">Products</a>
+    <a href="#" onclick="showPage('blog'); toggleMenu(); return false;">Beauty Tips</a>
+    <a href="#" onclick="showPage('about'); toggleMenu(); return false;">About</a>
+    <a href="#" onclick="showPage('contact'); toggleMenu(); return false;">Contact</a>
+  </div>
+</nav>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- ===================================================
+     HOME PAGE
+==================================================== -->
+<div id="page-home" class="page active">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">✨ Top-Rated Beauty &amp; Care Products</div>
+      <h1>Discover Your <span>Glow</span> with Curated Picks</h1>
+      <p>We hand-pick the best nail care, beauty, electronics and accessories from Amazon — so you don't have to.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="showPage('products')">Browse Products</button>
+        <button class="btn-secondary" onclick="showPage('blog')">Beauty Tips</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stats-inner" id="stats-inner">
+      <!-- filled by JS -->
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Shop by <span>Category</span></h2>
+      <a href="#" class="see-all" onclick="showPage('products'); return false;">View All →</a>
+    </div>
+    <div class="cats-grid" id="cats-grid">
+      <!-- filled by JS -->
+    </div>
+  </div>
+
+  <!-- Popular Products -->
+  <div style="background:#fff; padding: 3rem 0;">
+    <div class="section" style="padding-top:0; padding-bottom:0;">
+      <div class="section-header">
+        <h2 class="section-title">Most <span>Popular</span> This Week</h2>
+        <a href="#" class="see-all" onclick="showPage('products'); return false;">View All →</a>
+      </div>
+      <div class="products-grid" id="home-products">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="newsletter">
+    <div class="newsletter-inner">
+      <h3>📬 Get the Latest Deals</h3>
+      <p>Subscribe and be the first to know about exclusive offers and new arrivals.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Your email address..." id="newsletterEmail">
+        <button class="btn-primary" onclick="subscribeNewsletter()">Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page-home -->
+
+<!-- ===================================================
+     PRODUCTS PAGE
+==================================================== -->
+<div id="page-products" class="page">
+  <div class="section">
+    <h1 style="font-size:1.8rem; font-weight:700; margin-bottom:.5rem;">
+      Browse <span style="color:var(--gold)">All Products</span>
+    </h1>
+    <p style="color:var(--text2); margin-bottom:1.5rem;">Hand-picked from Amazon with the best prices and ratings</p>
+
+    <!-- Search -->
+    <div class="search-bar">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+      </svg>
+      <input type="text" placeholder="Search products..." id="searchInput" oninput="filterProducts()">
+    </div>
+
+    <!-- Filter bar (built by JS) -->
+    <div class="filter-bar" id="filterBar"></div>
+
+    <!-- Products grid -->
+    <div class="products-grid" id="all-products"></div>
+  </div>
+</div><!-- /page-products -->
+
+<!-- ===================================================
+     PRODUCT / BLOG DETAIL PAGE
+==================================================== -->
+<div id="page-detail" class="page">
+  <div class="detail-layout" id="detail-content"></div>
+</div>
+
+<!-- ===================================================
+     BLOG PAGE
+==================================================== -->
+<div id="page-blog" class="page">
+  <div class="section">
+    <h1 style="font-size:1.8rem; font-weight:700; margin-bottom:.5rem;">
+      Beauty <span style="color:var(--gold)">Tips &amp; Ideas</span>
+    </h1>
+    <p style="color:var(--text2); margin-bottom:2rem;">Expert tips, tutorials and trend guides from Glam Touch</p>
+    <div class="blog-grid" id="blog-grid"></div>
+  </div>
+</div>
+
+<!-- ===================================================
+     ABOUT PAGE
+==================================================== -->
+<div id="page-about" class="page">
+  <div class="about-section">
+    <div class="about-icon">💫</div>
+    <h2>The <span style="color:var(--gold)">Glam Touch</span> Story</h2>
+    <p>
+      We started from our passion for the world of beauty and personal care, to provide you with a smart and
+      trustworthy shopping experience. We carefully select the best products from Amazon across nail care,
+      makeup, skincare, electronics and gift sets.
+    </p>
+    <p>
+      Our mission is simple: find the best so you don't have to. Every product you see here is selected based
+      on real customer reviews, quality standards, and genuine value.
+    </p>
+    <p style="font-size:13px; color:var(--text3); background:#f5f5f3; border-radius:8px; padding:12px 16px;">
+      Disclosure: Glam Touch participates in the Amazon Associates affiliate program. When you purchase through
+      our links, we may earn a small commission at no extra cost to you.
+    </p>
+    <div class="about-vals">
+      <div class="val-card">
+        <div class="val-icon">🏆</div>
+        <div class="val-title">Quality Guaranteed</div>
+        <div class="val-desc">Every product is carefully curated based on genuine customer reviews.</div>
+      </div>
+      <div class="val-card">
+        <div class="val-icon">🔒</div>
+        <div class="val-title">Safe Shopping</div>
+        <div class="val-desc">All purchases go through Amazon's trusted secure checkout.</div>
+      </div>
+      <div class="val-card">
+        <div class="val-icon">💝</div>
+        <div class="val-title">Personal Touch</div>
+        <div class="val-desc">We recommend products we'd buy ourselves.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================================
+     CONTACT PAGE
+==================================================== -->
+<div id="page-contact" class="page">
+  <div class="contact-section">
+    <h2>Get in <span style="color:var(--gold)">Touch</span></h2>
+    <p>Have a question or suggestion? We'd love to hear from you.</p>
+    <div class="form-success" id="formSuccess">✅ Message sent! We'll get back to you within 24 hours.</div>
+    <form onsubmit="submitForm(event)">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Your name..." required>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="Your email address..." required>
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <select>
+          <option>Product inquiry</option>
+          <option>Product suggestion</option>
+          <option>Partnership or collaboration</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Write your message here..." required></textarea>
+      </div>
+      <button type="submit" class="btn-primary"
+        style="width:100%; padding:14px; font-size:15px; font-family:'Inter',sans-serif;">
+        Send Message
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- ===================================================
+     FOOTER
+==================================================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo" style="margin-bottom:.5rem;">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:white">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <span>Glam Touch</span>
+      </div>
+      <p>Your go-to store for beauty, nails, and lifestyle. We pick the best from Amazon for you.</p>
+      <div class="social-links">
+        <a class="social-btn" href="#" title="Instagram">📸</a>
+        <a class="social-btn" href="#" title="TikTok">🎵</a>
+        <a class="social-btn" href="#" title="YouTube">▶️</a>
+        <a class="social-btn" href="#" title="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <div id="footer-cat-links"><!-- filled by JS --></div>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <a href="#" onclick="showPage('home'); return false;">Home</a>
+      <a href="#" onclick="showPage('blog'); return false;">Beauty Tips</a>
+      <a href="#" onclick="showPage('about'); return false;">About</a>
+      <a href="#" onclick="showPage('contact'); return false;">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="mailto:hello@glamtouch.com">hello@glamtouch.com</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Affiliate Disclosure</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Glam Touch — All rights reserved |
+    <a href="https://affiliate-program.amazon.com" target="_blank">Amazon Associates</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+{
+  "affiliateTag": "glamtouch-20",
+  "products": [
+    {
+      "id": 1,
+      "name": "Vibration Plate Exercise Machine",
+      "desc": "Vibration Plate for Lymphatic Drainage Weight Loss, 450 Lbs Capacity Full Body Vibrating Platform Workout Equipment with Bluetooth for Home Women Men",
+      "price": "79.99",
+      "oldPrice": "99.99",
+      "cat": "electronics",
+      "badge": "popular",
+      "image": "images/b.png",
+      "link": "https://amzn.to/3V86thy",
+      "specs": [
+        ["Brand", "SEDOZIK"],
+        ["Item Weight", "6.55 kg"],
+        ["Color", "Black"],
+        ["Material", "Plastic"]
+      ]
+    },
+    {
+      "id": 2,
+      "name": "JanSport Right Pack Backpack",
+      "desc": "Durable Daypack with Padded 15 Laptop Sleeve, Spacious Main Compartment & Integrated Water Bottle Pocket - Hydrangea",
+      "price": "64.95",
+      "oldPrice": null,
+      "cat": "accessories",
+      "badge": "new",
+      "image": "images/a.png",
+      "emoji": "a.png",
+      "link": "https://amzn.to/3Vtk5Eb"
+    }
+     ,
+    {
+      "id": 3,
+      "name": "Wireless Headset with Mic for Work Bluetooth Headset with Microphone for PC",
+      "desc": "Qualcomm Chipeset Dongle, Busy/Mute Light, Noise Cancelling Wireless Headphones with Mic for Work Computer Call Center Office",
+      "oldPrice": null,
+      "price": "99.99" ,
+      "cat": "electronics",
+      "badge": "new",
+      "image": "images/c.png",
+      "emoji": "📱",
+      "link": "https://amzn.to/4A7NwMd"
+    }
+    ,
+    {
+      "id": 4,
+      "name": "WIHOLL Womens Fall Sweaters Contrast Raglan Sleeve Tops Fashion Clothing",
+      "desc": "Jacquard Sleeve,Soft Knitted,Lightweight Pullover Sweater,Cozy Long Sleeve Shirts,Comfy Business Casual Outfits,Daily Casual"
+      ,"price": "99.99" ,
+      "oldPrice": null,
+      "cat": "gifts",
+      "badge": "new",
+      "image": "images/d.png",
+      "emoji": "🎁",
+      "link": "https://amzn.to/4inZYkp"
+    },
+    {
+  "id": 5,
+  "name": "WIHOLL Long Sleeve Shirts for Women Fall Tops Casual Outfits",
+  "desc": "Women's fall long sleeve tops made from 90% Polyester and 10% Spandex. Soft, comfortable and stretchy casual shirts, suitable for daily wear, teacher outfits, business casual looks and layering. Machine washable.",
+  "price": "8.99",
+  "oldPrice": "19.99",
+  "cat": "gifts",
+  "badge": "sale",
+  "image": "images/e.png",
+  "emoji": "🎁",
+  "link": "https://amzn.to/3Tvy6kb"
+},
+{
+  "id": 6,
+  "name": "SEEDEEM 2-Slice Touchscreen Toaster, Stainless Steel, 7 Shade, 1350W",
+  "desc": "2-slice touchscreen toaster with 7 shade settings, 6 bread types, 1.5-inch wide slots, 1350W power and a removable crumb tray. Stainless steel design for everyday kitchen use.",
+  "price": "41.99",
+  "cat": "home",
+  "badge": "new",
+  "image": "images/f.png",
+  "emoji": "🍞",
+  "link": "https://amzn.to/4rf0pjb"
+},{
+  "id": 7,
+  "name": "SAMSUNG Galaxy FIT 3 [2025, 40MM] Fitness Tracker",
+  "desc": "Samsung Galaxy Fit 3 with a 1.6-inch AMOLED display, IP68 water resistance, up to 14 days of battery life, 100+ watchfaces and 100+ exercise modes. International model with fast charger bundle.",
+  "price": "47.99",
+  "oldPrice": "0",
+  "cat": "electronics",
+  "image": "images/g.png",
+  "emoji": "📱",
+  "link": "https://amzn.to/4gVfZx9"
+},{
+  "id": 8,
+  "name": "2026 Smart Ring for Women & Men, Sleep Health Fitness Tracker",
+  "desc": "VANBERRAY smart ring with sleep, heart rate, blood oxygen, stress and activity tracking. Includes women health and cycle tracking, 5-7 day battery life, no app fee, and compatibility with iOS and Android.",
+  "price": "59.99",
+  "oldPrice": "0",
+  "cat": "electronics",
+  "image": "images/h.png",
+  "emoji": "📱",
+  "link": "https://amzn.to/470NI2h"
+},{
+  "id": 9,
+  "name": "High Vis Energy - Tradie Early Starts Long Days T-Shirt",
+  "desc": "A bold high-vis inspired graphic T-shirt celebrating hard-working tradespeople. Perfect for carpenters, electricians, plumbers and construction workers who start early and work long days.",
+  "price": "16.00",
+  "oldPrice": "24.00",
+  "cat": "mens",
+  "badge": "sale",
+  "image": "images/m.png",
+  "emoji": "🧔",
+  "link": "https://www.teepublic.com/t-shirt/98880038-high-vis-energy-tradie-early-starts-long-days"
+}
+  ],
+  "categories": [
+    { "key": "nails",        "emoji": "💅",  "name": "Nail Care" },
+    { "key": "beauty",       "emoji": "💄",  "name": "Beauty Tools" },
+    { "key": "electronics",  "emoji": "📱",  "name": "Electronics" },
+    { "key": "accessories",  "emoji": "👜",  "name": "Accessories" },
+    { "key": "gifts",        "emoji": "🎁",  "name": "Gift Sets" },
+    { "key": "skincare",     "emoji": "🧴",  "name": "Skincare" },
+    { "key": "haircare",     "emoji": "💇‍♀️", "name": "Hair Care" },
+    { "key": "fragrance",    "emoji": "🌸",  "name": "Fragrance" },
+    { "key": "wellness",     "emoji": "🧘‍♀️", "name": "Wellness" },
+    { "key": "home",         "emoji": "🕯️",  "name": "Home & Living" },
+    { "key": "mens",         "emoji": "🧔",  "name": "Men's Grooming" }
+  ],
+  "stats": [
+    { "num": "500+",  "label": "Curated Products" },
+    { "num": "10K+",  "label": "Happy Shoppers"   },
+    { "num": "4.9★",  "label": "Avg. Rating"      },
+    { "num": "100%",  "label": "Amazon Verified"  }
+  ]
+}
